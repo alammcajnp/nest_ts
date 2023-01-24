@@ -21,7 +21,7 @@ export class CustomerController {
   // Retrieve customer
   @Get('/')
   async getc(@Res() res) {
-    return res.status(HttpStatus.OK).json('Running right now');
+    return res.status(HttpStatus.OK).json('Running right now, ok');
   }
 
   // add a customer
