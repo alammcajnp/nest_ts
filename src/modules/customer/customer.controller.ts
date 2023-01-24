@@ -18,6 +18,12 @@ import { CreateCustomerDTO } from './dto/create-customer.dto';
 export class CustomerController {
   constructor(private customerService: CustomerService) {}
 
+  // Retrieve customer
+  @Get('/')
+  async getc(@Res() res) {
+    return res.status(HttpStatus.OK).json('Running right now');
+  }
+
   // add a customer
   @Post('/create')
   async addCustomer(@Res() res, @Body() createCustomerDTO: CreateCustomerDTO) {
